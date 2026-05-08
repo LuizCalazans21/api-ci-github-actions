@@ -10,3 +10,8 @@ def test_root():
 def test_somar():
     response = client.get("/somar/2/3")
     assert response.json() == {"resultado": 5}
+
+def test_multiplicar():
+    response = client.get("/multiplicar/2/2")
+    # ERRO INTENCIONAL: 2*2 é 4, não 5
+    assert response.json() == {"resultado": 5}
