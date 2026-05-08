@@ -10,3 +10,7 @@ def test_root():
 def test_somar():
     response = client.get("/somar/2/3")
     assert response.json() == {"resultado": 5}
+
+def test_multiplicar():
+    response = client.get("/multiplicar/2/2")
+    assert response.json() == {"resultado": 4}  
